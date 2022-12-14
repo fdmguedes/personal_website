@@ -28,10 +28,14 @@ const Footer = () => {
       </ul>
 
       <div className="footer__socials">
-        <a href="https://www.linkedin.com/in/filipe--guedes/">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.linkedin.com/in/filipe--guedes/"
+        >
           <FaLinkedinIn />
         </a>
-        <a href="https://github.com/MeerKatPT">
+        <a target="_blank" rel="noreferrer" href="https://github.com/MeerKatPT">
           <FaGithub />
         </a>
       </div>
