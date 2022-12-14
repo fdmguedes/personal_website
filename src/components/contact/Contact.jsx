@@ -1,11 +1,19 @@
 import React from "react";
+import { useState } from "react";
 import "./contact.css";
 import { MdOutlineEmail } from "react-icons/md";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
+const Result = () => {
+  return (
+    <p>Thank you for your message. I'll get back to you as soon as possible!</p>
+  );
+};
+
 const Contact = () => {
+  const [result, showResult] = useState(false);
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -18,7 +26,13 @@ const Contact = () => {
       "MRqYgc9llFnAUBZ8P"
     );
     e.target.reset();
+    showResult(true);
   };
+
+  // hide result
+  setTimeout(() => {
+    showResult(false);
+  }, 5000);
   return (
     <section id="contact">
       <h2>Contact Me</h2>
@@ -65,6 +79,11 @@ const Contact = () => {
           <button type="submit" className="btn btn-primary">
             Send Message
           </button>
+          <div className="message">
+            <div className="success" id="success">
+              {result ? <Result /> : null}
+            </div>
+          </div>
         </form>
       </div>
     </section>
