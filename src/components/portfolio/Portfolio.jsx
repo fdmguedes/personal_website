@@ -3,45 +3,55 @@ import "./portfolio.css";
 import IMG1 from "../../assets/project1.png";
 import IMG2 from "../../assets/project2.png";
 
+const data = [
+  {
+    id: 1,
+    image: IMG1,
+    title: "IronBomb Multiplayer",
+    github: "https://github.com/MeerKatPT/game_project",
+    demo: "https://meerkatpt.github.io/game_project/",
+  },
+  {
+    id: 2,
+    image: IMG2,
+    title: "Portuguese News Portal",
+    github: "https://github.com/MeerKatPT/2ModuleProject",
+    demo: "http://frontline-portugal.cyclic.app/",
+  },
+  {
+    id: 3,
+    image: IMG2,
+    title: "My Personal Website",
+    github: "https://github.com/MeerKatPT/personal_website",
+    demo: "http://google.com",
+  },
+];
+
 const Portfolio = () => {
   return (
     <section id="portfolio">
       <h2>Portfolio</h2>
 
       <div className="container portfolio__container">
-        <article className="portfolio__item">
+      {
+        data.map(({id, image, title, github, demo}) => {
+          return (
+            <article key={id} className="portfolio__item">
           <div className="portfolio__item-image ">
-            <img src={IMG1} alt="projectgameImg" />
+            <img src={image} alt={title} />
           </div>
+          <h3>{title}</h3>
           <div className="portfolio__item-cta">
-            <h3>IronBomb Multiplayer Game</h3>
-            <a href="https://github.com/MeerKatPT/game_project" className="btn">
-              GitHub Repo
-            </a>
             <a
-              href="https://meerkatpt.github.io/game_project/"
-              className="btn btn-primary"
-              rel="noreferrer"
-              target="_blank"
-            >
-              Live Demo
-            </a>
-          </div>
-        </article>
-        <article className="portfolio__item">
-          <div className="portfolio__item-image ">
-            <img src={IMG2} alt="newsprojectImg" />
-          </div>
-          <div className="portfolio__item-cta">
-            <h3>Portuguese News Hub</h3>
-            <a
-              href="https://github.com/MeerKatPT/2ModuleProject"
+              href={github}
               className="btn"
+              rel="noreferrer"
+              target="_blank"
             >
-              GitHub Repo
+              GitHub
             </a>
             <a
-              href="https://frontline-portugal.cyclic.app/"
+              href={demo}
               className="btn btn-primary"
               rel="noreferrer"
               target="_blank"
@@ -50,28 +60,9 @@ const Portfolio = () => {
             </a>
           </div>
         </article>
-        <article className="portfolio__item">
-          <div className="portfolio__item-image ">
-            <img src={IMG2} alt="newsprojectImg" />
-          </div>
-          <div className="portfolio__item-cta">
-            <h3>Personal Website</h3>
-            <a
-              href="https://github.com/MeerKatPT/2ModuleProject"
-              className="btn"
-            >
-              GitHub Repo
-            </a>
-            <a
-              href="https://frontline-portugal.cyclic.app/"
-              className="btn btn-primary"
-              rel="noreferrer"
-              target="_blank"
-            >
-              Live Demo
-            </a>
-          </div>
-        </article>
+          )
+        })
+      }
       </div>
     </section>
   );

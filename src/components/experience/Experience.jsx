@@ -33,7 +33,7 @@ function Experience() {
             </article>
             <article className="experience__details">
               <BsBootstrap className="experience__details-icon" />
-              <h4>JavaScript</h4>
+              <h4>Bootstrap</h4>
             </article>
             <article className="experience__details">
               <SiHandlebarsdotjs className="experience__details-icon" />

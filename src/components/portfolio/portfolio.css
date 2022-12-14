@@ -19,6 +19,7 @@
 
 .portfolio__item-image {
   border-radius: 1.5rem;
+  max-height: 140px; 
   overflow: hidden;
 }
 
@@ -30,4 +31,22 @@
   display: flex;
   gap: 1rem;
   margin-bottom: 1rem;
+}
+
+/*MEDIA QUERIES (MEDIUM DEVICES) like tables */
+
+@media screen and (max-width: 1024px) {
+  .portfolio__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+}
+
+/*MEDIA QUERIES (SMALL DEVICES) like mobile phones */
+
+@media screen and (max-width: 600px) {
+  .portfolio__container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }
