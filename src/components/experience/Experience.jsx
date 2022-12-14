@@ -10,6 +10,8 @@ import { FaNodeJs } from "react-icons/fa";
 import { DiGitBranch } from "react-icons/di";
 import { BsBootstrap } from "react-icons/bs";
 import { TbBrandPython } from "react-icons/tb";
+import { SiTypescript } from "react-icons/si";
+import { SiExpress } from "react-icons/si";
 
 function Experience() {
   return (
@@ -61,9 +63,20 @@ function Experience() {
               <h4>Git</h4>
             </article>
             <article className="experience__details">
+              <SiExpress className="experience__details-icon" />
+              <h4>ExpressJS</h4>
+            </article>
+            <article className="experience__details">
               <TbBrandPython className="experience__details-icon" />
               <div>
                 <h4>Python</h4>
+                <small className="text-light">Learning</small>
+              </div>
+            </article>
+            <article className="experience__details">
+              <SiTypescript className="experience__details-icon" />
+              <div>
+                <h4>TypeScript</h4>
                 <small className="text-light">Learning</small>
               </div>
             </article>
