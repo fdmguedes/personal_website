@@ -1,6 +1,8 @@
 import React from "react";
 import "./about.css";
 import ME from "../../assets/dev.png";
+import PHOTO2 from "../../assets/photo2.png"
+import PHOTO1 from "../../assets/photo1.jpeg"
 import { BiCode } from "react-icons/bi";
 import { IoSchoolOutline } from "react-icons/io5";
 import { GiWorld } from "react-icons/gi";
@@ -13,7 +15,7 @@ function About() {
       <div className="container about__container">
         <div className="about__me">
           <div className="about__me-image">
-            <img src={ME} alt="AboutImage" />
+            <img src={PHOTO1} alt="AboutImage" />
           </div>
         </div>
         <div className="about__content">
