@@ -2,6 +2,7 @@ import React from "react";
 import "./portfolio.css";
 import IMG1 from "../../assets/project1.png";
 import IMG2 from "../../assets/project2.png";
+import IMG3 from "../../assets/project3.png";
 
 const data = [
   {
@@ -20,10 +21,10 @@ const data = [
   },
   {
     id: 3,
-    image: IMG2,
+    image: IMG3,
     title: "My Personal Website",
     github: "https://github.com/MeerKatPT/personal_website",
-    demo: "http://google.com",
+    demo: "https://filipe-guedes.com/",
   },
 ];
 
@@ -33,36 +34,34 @@ const Portfolio = () => {
       <h2>Portfolio</h2>
 
       <div className="container portfolio__container">
-      {
-        data.map(({id, image, title, github, demo}) => {
+        {data.map(({ id, image, title, github, demo }) => {
           return (
             <article key={id} className="portfolio__item">
-          <div className="portfolio__item-image ">
-            <img src={image} alt={title} />
-          </div>
-          <h3>{title}</h3>
-          <div className="portfolio__item-cta">
-            <a
-              href={github}
-              className="btn"
-              rel="noreferrer"
-              target="_blank"
-            >
-              GitHub
-            </a>
-            <a
-              href={demo}
-              className="btn btn-primary"
-              rel="noreferrer"
-              target="_blank"
-            >
-              Live Demo
-            </a>
-          </div>
-        </article>
-          )
-        })
-      }
+              <div className="portfolio__item-image ">
+                <img src={image} alt={title} />
+              </div>
+              <h3>{title}</h3>
+              <div className="portfolio__item-cta">
+                <a
+                  href={github}
+                  className="btn"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  GitHub
+                </a>
+                <a
+                  href={demo}
+                  className="btn btn-primary"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Live Demo
+                </a>
+              </div>
+            </article>
+          );
+        })}
       </div>
     </section>
   );

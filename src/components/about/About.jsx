@@ -31,7 +31,9 @@ function About() {
             <article className="about__card fun__fact">
               <GiWorld className="about__icon" />
               <h5>Fun Fact</h5>
-              <small>I've visted 9,33% countries in the world (and counting) </small>
+              <small>
+                I've visited 9,33% countries in the world (and counting!){" "}
+              </small>
             </article>
           </div>
           <p>
