@@ -3,6 +3,7 @@ import "./portfolio.css";
 import IMG1 from "../../assets/project1.png";
 import IMG2 from "../../assets/project2.png";
 import IMG3 from "../../assets/project3.png";
+import IMG4 from "../../assets/project4.png";
 
 const data = [
   {
@@ -22,9 +23,16 @@ const data = [
   {
     id: 3,
     image: IMG3,
-    title: "My Personal Website",
+    title: "Personal Website - ReactJS",
     github: "https://github.com/MeerKatPT/personal_website",
     demo: "https://filipe-guedes.com/",
+  },
+  {
+    id: 4,
+    image: IMG4,
+    title: "Todo List - VueJS",
+    github: "https://github.com/MeerKatPT/VueJS-to-do-list-app",
+    demo: "https://todolist-vuejsapp.netlify.app/",
   },
 ];
 
